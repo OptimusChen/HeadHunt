@@ -1,0 +1,23 @@
+name: HeadHunt
+main: com.itech4kids.mc.headhunt.HeadHunt
+version: 0.1
+commands:
+  yell:
+    aliases: []
+    description: The command to call for people to join
+  join:
+    aliases: []
+    description: The command to join the Head Hunt game
+  setSpawn:
+    aliases: []
+    description: The command to set the spawn corner locations of the arena
+  setDMSpawn:
+    description: The command to set the spawn corner locations of the death match arena
+    aliases: []
+  shop:
+    description: The command to shop for items
+    aliases: []
+  kitsInventory:
+    description: The command to kits for items
+    aliases: []
+
