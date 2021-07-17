@@ -20,4 +20,14 @@ commands:
   kitsInventory:
     description: The command to kits for items
     aliases: []
+  unlockall:
+    description: The command to kits for items
+    aliases: []
+  setLobbySpawn:
+    description:
+    aliases: []
+  addPlayerStat:
+    description:
+    aliases: []
+    usage: /addplayerstat <Player-Name> <Stat-Name> <Value>
 

@@ -1,4 +1,6 @@
-package com.itech4kids.mc.headhunt;
+package com.itech4kids.mc.headhunt.Objects;
+
+import org.bukkit.event.player.PlayerJoinEvent;
 
 public enum KitsType {
     DEFAULT,
@@ -18,6 +20,10 @@ public enum KitsType {
     ONEPOUNDFISH,
     ZOMBIE,
     DREADLORD,
-    BOMBER
-
+    BOMBER,
+    MEATMASTER,
+    SNOWMAN,
+    SPELEOLOGIST,
+    SPIDER,
+    ECOLOGIST
 }

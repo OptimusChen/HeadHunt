@@ -1,4 +1,4 @@
-package com.itech4kids.mc.headhunt;
+package com.itech4kids.mc.headhunt.Objects;
 
 public enum GameState {
     INIT,

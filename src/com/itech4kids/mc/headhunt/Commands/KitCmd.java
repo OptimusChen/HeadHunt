@@ -1,14 +1,14 @@
-package com.itech4kids.mc.headhunt;
+package com.itech4kids.mc.headhunt.Commands;
 
+import com.itech4kids.mc.headhunt.HeadHunt;
+import com.itech4kids.mc.headhunt.Objects.ActivePlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.SkullType;
-import org.bukkit.block.Skull;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -57,6 +57,11 @@ public class KitCmd implements CommandExecutor {
         ItemStack zombie = new ItemStack(Material.ROTTEN_FLESH);
         ItemStack dreadlord = new ItemStack(Material.SKULL_ITEM, 1, (byte) SkullType.PLAYER.ordinal());
         ItemStack bomber = new ItemStack(Material.TNT);
+        ItemStack meat = new ItemStack(Material.COOKED_BEEF);
+        ItemStack snow = new ItemStack(Material.SNOW_BALL);
+        ItemStack speleo = new ItemStack(Material.DIAMOND_PICKAXE);
+        ItemStack spider = new ItemStack(Material.SPIDER_EYE);
+        ItemStack eco = new ItemStack(Material.DIAMOND_AXE);
 
         ItemMeta itemMeta = enderpearl.getItemMeta();
         ItemMeta itemMeta1 = bow.getItemMeta();
@@ -76,6 +81,11 @@ public class KitCmd implements CommandExecutor {
         ItemMeta itemMeta15 = zombie.getItemMeta();
         SkullMeta itemMeta16 = (SkullMeta) dreadlord.getItemMeta();
         ItemMeta itemMeta17 = bomber.getItemMeta();
+        ItemMeta itemMeta18 = meat.getItemMeta();
+        ItemMeta itemMeta19 = snow.getItemMeta();
+        ItemMeta itemMeta20 = speleo.getItemMeta();
+        ItemMeta itemMeta21 = spider.getItemMeta();
+        ItemMeta itemMeta22 = eco.getItemMeta();
 
         itemMeta.setDisplayName(ChatColor.DARK_PURPLE + "Enderman Kit");
         itemMeta1.setDisplayName(ChatColor.YELLOW + "Archer Kit");
@@ -99,6 +109,11 @@ public class KitCmd implements CommandExecutor {
         itemMeta5.setOwner("01Herobrine10");
         itemMeta11.setOwner("Sloth");
         itemMeta16.setOwner("WitherSkeleton");
+        itemMeta18.setDisplayName(ChatColor.YELLOW + "Meatmaster Kit");
+        itemMeta19.setDisplayName(ChatColor.WHITE + "Snowman Kit");
+        itemMeta20.setDisplayName(ChatColor.GRAY + "Speleologist Kit");
+        itemMeta21.setDisplayName(ChatColor.GRAY + "Spider Kit");
+        itemMeta22.setDisplayName(ChatColor.GREEN + "Ecologist Kit");
 
         tank.setItemMeta(itemMeta6);
         pyromancer.setItemMeta(itemMeta7);
@@ -118,6 +133,11 @@ public class KitCmd implements CommandExecutor {
         zombie.setItemMeta(itemMeta15);
         dreadlord.setItemMeta(itemMeta16);
         bomber.setItemMeta(itemMeta17);
+        meat.setItemMeta(itemMeta18);
+        snow.setItemMeta(itemMeta19);
+        speleo.setItemMeta(itemMeta20);
+        spider.setItemMeta(itemMeta21);
+        eco.setItemMeta(itemMeta22);
 
         kitsItems.add(new ItemStack(normal));
         kitsItems.add(new ItemStack(enderpearl));
@@ -137,12 +157,15 @@ public class KitCmd implements CommandExecutor {
         kitsItems.add(new ItemStack(zombie));
         kitsItems.add(new ItemStack(dreadlord));
         kitsItems.add(new ItemStack(bomber));
+        kitsItems.add(new ItemStack(meat));
+        kitsItems.add(new ItemStack(snow));
+        kitsItems.add(new ItemStack(speleo));
+        kitsItems.add(new ItemStack(spider));
+        kitsItems.add(new ItemStack(eco));
 
         kits = Bukkit.createInventory(null, 27, "HeadHunt Kits");
         for (ItemStack item: kitsItems) {
             kits.setItem(kits.firstEmpty(), item);
         }
-
     }
-
 }

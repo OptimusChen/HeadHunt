@@ -1,4 +1,4 @@
-package com.itech4kids.mc.headhunt;
+package com.itech4kids.mc.headhunt.Objects;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;

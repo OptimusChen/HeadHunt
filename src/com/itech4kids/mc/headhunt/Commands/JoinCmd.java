@@ -1,5 +1,7 @@
-package com.itech4kids.mc.headhunt;
+package com.itech4kids.mc.headhunt.Commands;
 
+import com.itech4kids.mc.headhunt.HeadHunt;
+import com.itech4kids.mc.headhunt.Objects.ActivePlayer;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;

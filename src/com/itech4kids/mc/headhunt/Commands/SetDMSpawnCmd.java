@@ -1,5 +1,7 @@
-package com.itech4kids.mc.headhunt;
+package com.itech4kids.mc.headhunt.Commands;
 
+import com.itech4kids.mc.headhunt.Objects.GameState;
+import com.itech4kids.mc.headhunt.HeadHunt;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -7,10 +9,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class SetSpawnCmd implements CommandExecutor {
+public class SetDMSpawnCmd implements CommandExecutor {
     HeadHunt headhunt;
 
-    public SetSpawnCmd(HeadHunt headhunt) {
+    public SetDMSpawnCmd(HeadHunt headhunt) {
         this.headhunt = headhunt;
     }
 
@@ -21,19 +23,20 @@ public class SetSpawnCmd implements CommandExecutor {
             Location location = player.getLocation();
 
             if ( (headhunt.gameState != GameState.INIT) &&
-                    (headhunt.gameState != GameState.READY) )
-            {
+                    (headhunt.gameState != GameState.READY) ) {
                 player.sendMessage("The spawn location can't be changed once the game starts");
-            } else if (args.length == 0) {
-                player.sendMessage(ChatColor.RED + "Usage: /setSpawn <1/2> to send the corners of the arena");
+            }
+            if (args.length == 0) {
+                player.sendMessage(ChatColor.RED + "Usage: /SetDMSpawnCmd <1/2> to send the corners of the death arena");
             } else {
                 int index = Integer.parseInt(args[0]);
-                if ( (index == 1) || (index == 2) ) {
-                    headhunt.setArenaSpawn(index, location);
+                if ((index == 1) || (index == 2)) {
+                    headhunt.setDMArenaSpawn(index, location);
                 } else {
-                    player.sendMessage(ChatColor.RED + "Usage: /setSpawn <1/2> to send the corners of the arena");
+                    player.sendMessage(ChatColor.RED + "Usage: /SetDMSpawnCmd <1/2> to send the corners of the death arena");
                 }
             }
+
         }
         return true;
     }

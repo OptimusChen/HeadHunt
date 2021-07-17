@@ -1,5 +1,6 @@
-package com.itech4kids.mc.headhunt;
+package com.itech4kids.mc.headhunt.Objects;
 
+import com.itech4kids.mc.headhunt.HeadHunt;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.command.PluginIdentifiableCommand;
