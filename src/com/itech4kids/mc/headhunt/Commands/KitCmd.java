@@ -2,6 +2,8 @@ package com.itech4kids.mc.headhunt.Commands;
 
 import com.itech4kids.mc.headhunt.HeadHunt;
 import com.itech4kids.mc.headhunt.Objects.ActivePlayer;
+import com.itech4kids.mc.headhunt.Util.ItemHandler;
+import com.itech4kids.mc.headhunt.Util.KitsManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -114,6 +116,12 @@ public class KitCmd implements CommandExecutor {
         itemMeta20.setDisplayName(ChatColor.GRAY + "Speleologist Kit");
         itemMeta21.setDisplayName(ChatColor.GRAY + "Spider Kit");
         itemMeta22.setDisplayName(ChatColor.GREEN + "Ecologist Kit");
+
+        kitsItems.add(ItemHandler.createKitSelectionItem("Enderman", ChatColor.DARK_PURPLE, Material.ENDER_PEARL, KitsManager.endermanKit));
+        kitsItems.add(ItemHandler.createKitSelectionItem("Archer", ChatColor.YELLOW, Material.BOW, KitsManager.archerKit));
+        kitsItems.add(ItemHandler.createKitSelectionItem("Berserker", ChatColor.RED, Material.DIAMOND_SWORD, KitsManager.berserkerKit));
+        kitsItems.add(ItemHandler.createKitSelectionItem("Default", ChatColor.WHITE, Material.IRON_CHESTPLATE, KitsManager.defaultKit));
+        kitsItems.add(ItemHandler.createKitSelectionItem("Pigman", ChatColor.GOLD, Material.GRILLED_PORK, KitsManager.pigmanKit));
 
         tank.setItemMeta(itemMeta6);
         pyromancer.setItemMeta(itemMeta7);
